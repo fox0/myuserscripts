@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name mediawiki permalink
-// @version 2
+// @version 3
 // @match https://*.wikipedia.org/w*
 // @match https://*.wikifur.com/w*
 // @match https://posmotre.li/*
