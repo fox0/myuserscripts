@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name     mediawiki permalink
-// @version  1
+// @name mediawiki permalink
+// @version 2
 // @match https://*.wikipedia.org/w*
 // @match https://*.wikifur.com/w*
-// @match https://lurkmore.to/*
 // @match https://posmotre.li/*
 // @match http://xgu.ru/w*
+// @match http*://lurkmore.to/*
 // ==/UserScript==
 
 (function(){
