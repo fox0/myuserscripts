@@ -4,8 +4,9 @@
 // @match https://*.wikipedia.org/w*
 // @match https://*.wikifur.com/w*
 // @match https://posmotre.li/*
+// @match https://lurkmore.to/*
+// @match http://lurkmore.to/*
 // @match http://xgu.ru/w*
-// @match http*://lurkmore.to/*
 // ==/UserScript==
 
 (function(){
