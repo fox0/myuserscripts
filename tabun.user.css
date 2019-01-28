@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name           tabun comment author
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+==/UserStyle== */
+
+@-moz-document domain("tabun.everypony.ru") {
+	li.comment-topic-author::after {
+		content: '(автор)';
+	}
+}
