@@ -1,0 +1,13 @@
+
+/* ==UserStyle==
+@name           common fix form
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+==/UserStyle== */
+@-moz-document regexp('.*') {
+	textarea,
+	input[type="text"] {
+		background: #fff;
+		color: #000;
+	}
+}
