@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name     habr alizar
-// @version  1
+// @version  2
 // @match https://habr.com/ru/post/*
 // ==/UserScript==
 (function(){
-  var user = document.getElementsByClassName('post__meta')[0].children[0].children[1].innerText;
-  if(user == 'alizar') {
-    var title = document.getElementsByClassName('post__title_full')[0];
+  var user = document.querySelector('header.post__meta .user-info__nickname');
+  if(user.innerText == 'alizar') {
+    var title = document.querySelector('h1.post__title');
     title.style = 'background-color: #ff0;';
   }
 })();
