@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name mediawiki permalink
-// @version 4
+// @version 5
 // @match https://*.wikipedia.org/w*
 // @match https://*.wiktionary.org/w*
 // @match https://commons.wikimedia.org/w*
