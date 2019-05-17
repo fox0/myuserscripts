@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Google blacklist
-// @version 1
+// @version 2
 // @match https://www.google.com/search*
 // ==/UserScript==
 (function() {
