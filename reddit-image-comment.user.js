@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name reddit image comment
-// @version 3
+// @version 4
 // @match https://www.reddit.com/r/*/comments/*
 // ==/UserScript==
 (function() {
@@ -14,7 +14,7 @@
     count_qs = qs.length;
     Array.from(qs).forEach(function(a) {
       var text = null;
-      if (a.href.endsWith('.jpg') || a.href.endsWith('.png')) {
+      if (a.href.endsWith('.jpg') || a.href.endsWith('.png') || a.href.endsWith('.gif')) {
         text = '<img src="' + a.href + '" style="max-width:100%;">';
       }
       if (a.href.includes('format=mp4')) {
@@ -23,7 +23,7 @@
       if (text) {
         var p = document.createElement('p');
         if (a.innerHTML == a.href) {
-          p.innerHTML = text;
+          p.innerHTML = text; //replace
         } else {
           p.innerHTML = a.innerHTML + '<br>' + text;
         }
