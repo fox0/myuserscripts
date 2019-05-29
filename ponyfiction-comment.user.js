@@ -18,4 +18,4 @@ for (const e of document.getElementsByClassName('vote-total')) {
   e.innerHTML = 
     '<span style="color: #' + (upvotes>0?'0a0':'888') + ';">+' + upvotes + '</span> ' +
     '<span style="color: #' + (downvotes>0?'a00':'888') + ';">-' + downvotes + '</span>';
-});  
+}
