@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name reddit image comment
-// @version 4
+// @version 5
 // @match https://www.reddit.com/r/*/comments/*
 // ==/UserScript==
 (function() {
@@ -12,7 +12,7 @@
       return;  
     }
     count_qs = qs.length;
-    Array.from(qs).forEach(function(a) {
+    for (const a of qs) {
       var text = null;
       if (a.href.endsWith('.jpg') || a.href.endsWith('.png') || a.href.endsWith('.gif')) {
         text = '<img src="' + a.href + '" style="max-width:100%;">';
@@ -29,7 +29,7 @@
         }
         a.parentNode.replaceChild(p, a);
       }
-    });
+    }
   }
   window.onscroll = _update;
   _update();
