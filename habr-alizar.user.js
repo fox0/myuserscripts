@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name     habr alizar
-// @version  2
-// @match https://habr.com/ru/post/*
+// @version  0.3
+// @match    https://habr.com/ru/post/*
+// @match    https://habr.com/ru/news/t/*
 // ==/UserScript==
 (function(){
-  var user = document.querySelector('header.post__meta .user-info__nickname');
-  if(user.innerText == 'alizar') {
-    var title = document.querySelector('h1.post__title');
-    title.style = 'background-color: #ff0;';
+  for (let e of document.getElementsByClassName('user-info__nickname')) {
+    if (e.innerText == 'alizar') {
+      e.style = 'background-color: #ff0;';
+  	}
   }
 })();
