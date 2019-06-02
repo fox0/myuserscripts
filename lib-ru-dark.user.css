@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name      lib.ru dark
 @namespace github.com/openstyles/stylus
-@version   0.0.1
+@version   0.0.2
 ==/UserStyle== */
-@-moz-document domain('lib.ru') {
+@-moz-document regexp('http://www.lib.ru/.+/.+/.+html') {
 	body {
 		width: 600px;
 		color: rgb(245, 237, 136);
