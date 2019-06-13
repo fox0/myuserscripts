@@ -1,17 +1,19 @@
 // ==UserScript==
 // @name mediawiki permalink
-// @version 6
-// @match https://*.wikipedia.org/w*
-// @match https://*.wiktionary.org/w*
-// @match https://commons.wikimedia.org/w*
-// @match https://*.wikifur.com/w*
+// @version 0.7
+// @match https://*.wikipedia.org/*
+// @match https://*.wiktionary.org/*
+// @match https://*.wikifur.com/*
+// @match https://commons.wikimedia.org/*
+// @match https://mrakopedia.org/*
 // @match https://posmotre.li/*
 // @match https://lurkmore.to/*
-// @match http://xgu.ru/w*
-// @match https://mrakopedia.org/w*
+// @match https://www.mediawiki.org/*
+// @match http://dfwk.ru/*
+// @match http://xgu.ru/*
 // ==/UserScript==
 (function(){
   var link = document.getElementById('t-permalink').firstChild;
   link.search = link.search.replace(/\?.*&(oldid=\d+)/, '?$1');
   link.style = 'color: #a00;';
-})();
+}());
