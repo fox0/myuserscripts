@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Youtube downloader
-// @version 0.3
+// @version 0.4
 // @match https://www.youtube.com/watch*
 // @match http://convert2mp3.net/en/index.php*
 // @match https://www.onlinevideoconverter.com/ru/youtube-converter*
@@ -16,10 +16,11 @@
       document.getElementById('messages').appendChild(a);
       a = get_a('https://www.onlinevideoconverter.com/ru/youtube-converter#mp4', 'mp4 (onlinevideoconverter.com)');
       document.getElementById('messages').appendChild(a);
+      a = get_a('https://www.onlinevideoconverter.com/ru/youtube-converter#aac', 'aac (onlinevideoconverter.com)');
+      document.getElementById('messages').appendChild(a);
       
       function get_a(url, text) {
-        var r;
-        r = document.createElement('a');
+        var r = document.createElement('a');
         r.style = 
           'display: inline-block;' + 
           'background: #222;' + 
@@ -43,9 +44,9 @@
   } else if (document.URL.startsWith('http://convert2mp3.net/en/index.php#mp4')) {
     window.onload = function() {
       var url = window.location.hash.substring(4);
-    	document.getElementById('urlinput').value = url;
-    	document.getElementById('select_main').value = 'mp4';
-    	document.getElementById('convertForm').submit(); 
+      document.getElementById('urlinput').value = url;
+      document.getElementById('select_main').value = 'mp4';
+      document.getElementById('convertForm').submit(); 
     };
   } else if (document.URL.startsWith('http://convert2mp3.net/en/index.php#aac')) {
     window.onload = function() {
@@ -56,13 +57,20 @@
     };
   } else if (document.URL.startsWith('http://convert2mp3.net/en/index.php?p=complete')) {
     window.onload = function() {
-			document.getElementsByClassName('btn-success')[0].click();
+      document.getElementsByClassName('btn-success')[0].click();
     };
-  } else if (document.URL.startsWith('https://www.onlinevideoconverter.com/ru/youtube-converter')) {
+  } else if (document.URL.startsWith('https://www.onlinevideoconverter.com/ru/youtube-converter#mp4')) {
     window.onload = function() {
       var url = window.location.hash.substring(4);
-   	 	document.getElementById('texturl').value = url;
-    	document.getElementById('convert1').click();
+      document.getElementById('texturl').value = url;
+      document.getElementById('convert1').click();
+    };
+  } else if (document.URL.startsWith('https://www.onlinevideoconverter.com/ru/youtube-converter#aac')) {
+    window.onload = function() {
+      var url = window.location.hash.substring(4);
+      document.getElementById('texturl').value = url;
+      document.querySelector('a[data-value=aac]').click();
+      document.getElementById('convert1').click();
     };
   } else if (document.URL.startsWith('https://www.onlinevideoconverter.com/ru/success')) {
     window.onload = function() {
