@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name mediawiki permalink
-// @version 0.7
+// @version 0.8
 // @match https://*.wikipedia.org/*
 // @match https://*.wiktionary.org/*
+// @match https://*.wikisource.org/*
 // @match https://*.wikifur.com/*
 // @match https://commons.wikimedia.org/*
 // @match https://mrakopedia.org/*
