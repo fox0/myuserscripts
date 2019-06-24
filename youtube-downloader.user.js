@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Youtube downloader
-// @version 0.4
+// @version 0.5
 // @match https://www.youtube.com/watch*
 // @match http://convert2mp3.net/en/index.php*
 // @match https://www.onlinevideoconverter.com/ru/youtube-converter*
@@ -9,33 +9,31 @@
 (function() {
   if (document.URL.startsWith('https://www.youtube.com/watch')) {
     window.onload = function() {
-      var a;
-      a = get_a('http://convert2mp3.net/en/index.php#mp4', 'mp4 (convert2mp3.net)');
-      document.getElementById('messages').appendChild(a);
-      a = get_a('http://convert2mp3.net/en/index.php#aac', 'aac (convert2mp3.net)');
-      document.getElementById('messages').appendChild(a);
-      a = get_a('https://www.onlinevideoconverter.com/ru/youtube-converter#mp4', 'mp4 (onlinevideoconverter.com)');
-      document.getElementById('messages').appendChild(a);
-      a = get_a('https://www.onlinevideoconverter.com/ru/youtube-converter#aac', 'aac (onlinevideoconverter.com)');
-      document.getElementById('messages').appendChild(a);
+      var messages = document.getElementById('messages')
+      messages.style = 'text-align: right;';
+      messages.appendChild(get_a('http://convert2mp3.net/en/index.php', 'mp4'));
+      messages.appendChild(get_a('http://convert2mp3.net/en/index.php', 'aac'));
+      messages.appendChild(get_a('https://www.onlinevideoconverter.com/ru/youtube-converter', 'mp4'));
+      messages.appendChild(get_a('https://www.onlinevideoconverter.com/ru/youtube-converter', 'aac'));
       
-      function get_a(url, text) {
+      function get_a(url, format) {
         var r = document.createElement('a');
         r.style = 
           'display: inline-block;' + 
-          'background: #222;' + 
+          'background: #393;' + 
           'color: #ddd;' + 
           'text-align: center;' + 
-          'padding: 5px;' + 
-          'margin:10px;' +
+          'padding: 5px 15px;' + 
+          'margin: 10px;' +
           'font-size: 1.5rem;' +
           'text-decoration: none;';
         r.target = '_blank';
-        r.innerText = text;
-        r.href = url + document.URL;
+        r.innerText = format;
+        r.title = url;
+        r.href = url + '#' + format + document.URL;
         //потому что document.URL может смениться без перезагрузки страницы
         r.onclick = function() {
-          this.href = url + document.URL;
+          this.href = url + '#' + format + document.URL;
           return true;
         }
         return r;
