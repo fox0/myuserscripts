@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ponyfiction dark
 @namespace      github.com/openstyles/stylus
-@version        0.0.1
+@version        0.0.2
 ==/UserStyle== */
 @-moz-document regexp("https://ponyfiction.org/story/\\d+/chapter/.+") {
 	.container {
@@ -16,6 +16,6 @@
 	.chapter-text {
 		width: 600px !important;
 		font-size: 1.4rem !important;
-		line-height: 150%;
+		line-height: 150% !important;
 	}
 }
