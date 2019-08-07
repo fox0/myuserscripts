@@ -1,0 +1,100 @@
+/* ==UserStyle==
+@name           ficbook genres
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+==/UserStyle== */
+@-moz-document domain("ficbook.net") {
+	/* https://ficbook.net/tag-categories/26 */
+	a[href="/tags/1647"],
+	a[href="/tags/1648"],
+	a[href="/tags/1649"],
+	
+	a[href="/tags/1650"],
+	a[href="/tags/1651"],
+	a[href="/tags/1652"],
+	a[href="/tags/1653"],
+	a[href="/tags/1654"],
+	a[href="/tags/1655"],
+	a[href="/tags/1656"],
+	a[href="/tags/1657"],
+	a[href="/tags/1658"],
+	a[href="/tags/1659"],
+	
+	a[href="/tags/1660"],
+	a[href="/tags/1661"],
+	a[href="/tags/1662"],
+	a[href="/tags/1663"],
+	/* … */
+	a[href="/tags/1691"],
+	/* … */
+	a[href="/tags/1699"],
+	/* … */
+	a[href="/tags/1705"],
+	a[href="/tags/1706"],
+	a[href="/tags/1707"],
+	a[href="/tags/1708"],
+	a[href="/tags/1709"],
+	
+	a[href="/tags/1710"],
+	a[href="/tags/1711"],	
+	a[href="/tags/1712"],
+	a[href="/tags/1713"],
+	a[href="/tags/1714"],
+	a[href="/tags/1715"],
+	a[href="/tags/1716"]
+	{
+		background-color:#f88 !important;
+	}
+	
+	/* https://ficbook.net/tag-categories/25 */
+	a[href="/tags/1292"],
+	
+	a[href="/tags/1664"],
+	a[href="/tags/1665"],
+	a[href="/tags/1666"],
+	a[href="/tags/1667"],
+	a[href="/tags/1668"],
+	a[href="/tags/1669"],
+	
+	a[href="/tags/1670"],
+	a[href="/tags/1671"],
+	a[href="/tags/1672"],
+	a[href="/tags/1673"],
+	a[href="/tags/1674"],
+	a[href="/tags/1675"],
+	a[href="/tags/1676"],
+	a[href="/tags/1677"],
+	a[href="/tags/1678"],
+	a[href="/tags/1679"],
+	
+	a[href="/tags/1680"],
+	a[href="/tags/1681"],
+	a[href="/tags/1682"],
+	a[href="/tags/1683"],
+	a[href="/tags/1684"],
+	a[href="/tags/1685"],
+	a[href="/tags/1686"],
+	a[href="/tags/1687"],
+	a[href="/tags/1688"],
+	a[href="/tags/1689"],
+	
+	a[href="/tags/1690"],
+	/*a[href="/tags/1691"],*/
+	a[href="/tags/1692"],
+	a[href="/tags/1693"],
+	a[href="/tags/1694"],
+	a[href="/tags/1695"],
+	a[href="/tags/1696"],
+	a[href="/tags/1697"],
+	a[href="/tags/1698"],
+	/*a[href="/tags/1699"],*/
+	
+	a[href="/tags/1700"],
+	a[href="/tags/1701"],
+	a[href="/tags/1702"],
+	a[href="/tags/1703"],
+	a[href="/tags/1704"]
+	{
+		background-color:#8f8 !important;
+	}
+}
