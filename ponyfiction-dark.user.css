@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ponyfiction dark
 @namespace      github.com/openstyles/stylus
-@version        0.0.3
+@version        0.0.4
 ==/UserStyle== */
 @-moz-document domain("ponyfiction.org") {
 	body,
@@ -9,7 +9,8 @@
 	#content .story-item:nth-child(2n+1), 
 	.comment-item:nth-child(2n+1), 
 	.comment-tree-loader:nth-child(2n+1),
-	.newsitem-listitem:nth-child(2n+1) {
+	.newsitem-listitem:nth-child(2n+1),
+	.notification:nth-child(2n+1) {
 		background: #000;
 	}
 	
@@ -17,7 +18,8 @@
 	#slides,
 	.nav-main,
 	.container,
-	.footer {
+	.footer,
+	.notification {
 		color: rgb(245, 237, 136);
 		background: rgb(35, 35, 45);
 	}
@@ -30,5 +32,9 @@
 		width: 600px !important;
 		font-size: 1.4rem !important;
 		line-height: 150% !important;
+	}
+	
+	a:visited {
+		color: #aaa;
 	}
 }
