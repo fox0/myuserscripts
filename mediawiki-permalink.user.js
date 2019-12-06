@@ -1,15 +1,18 @@
 // ==UserScript==
 // @name mediawiki permalink
-// @version 0.9
+// @version 0.12
 // @match https://*.wikipedia.org/*
 // @match https://*.wiktionary.org/*
 // @match https://*.wikisource.org/*
 // @match https://*.wikifur.com/*
 // @match https://commons.wikimedia.org/*
-// @match https://mrakopedia.org/*
+// @match https://encyclopediadramatica.rs/*
+// @match https://mrakopedia.net/*
 // @match https://posmotre.li/*
 // @match https://lurkmore.to/*
 // @match https://www.mediawiki.org/*
+// @match http://armor.kiev.ua/*
+// @match http://cyclowiki.org/*
 // @match http://dfwk.ru/*
 // @match http://wikireality.ru/*
 // @match http://xgu.ru/*
