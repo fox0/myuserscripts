@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name mediawiki permalink
-// @version 0.12
+// @version 0.13
 // @match https://*.wikipedia.org/*
 // @match https://*.wiktionary.org/*
 // @match https://*.wikisource.org/*
@@ -10,6 +10,7 @@
 // @match https://mrakopedia.net/*
 // @match https://posmotre.li/*
 // @match https://lurkmore.to/*
+// @match https://wiki.archlinux.org/*
 // @match https://www.mediawiki.org/*
 // @match http://armor.kiev.ua/*
 // @match http://cyclowiki.org/*
@@ -22,6 +23,6 @@
   if (li) {
     var a = li.firstChild;
     a.search = a.search.replace(/\?.*&(oldid=\d+)/, '?$1');
-    a.style = 'color: #a00;';
+    a.style = 'color: #a00 !important;';
   }
 }());
