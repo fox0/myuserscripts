@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name google blacklist
-// @version 0.4
+// @version 0.5
 // @match https://www.google.com/search*
 // ==/UserScript==
 (function() {
@@ -11,6 +11,7 @@
     'wiki-org.ru',
     'coderoad.ru',
     'www.rupython.com',
+    'stackoverrun.com',
     
     'dic.academic.ru'
   ];
