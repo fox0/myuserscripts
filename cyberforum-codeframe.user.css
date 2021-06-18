@@ -1,0 +1,10 @@
+/* ==UserStyle==
+@name           cyberforum codeframe
+@namespace      github.com/openstyles/stylus
+@version        0.1.0
+==/UserStyle== */
+@-moz-document domain("cyberforum.ru") {
+    .codeframe {
+    	width: calc(100vw - 365px);
+	}
+}
