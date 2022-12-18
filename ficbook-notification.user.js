@@ -1,19 +1,37 @@
 // ==UserScript==
 // @name         count notification
-// @version      0.3.1
-// @match        https://ficbook.net/notifications
+// @version      0.4
+// @match        https://ficbook.net/*
 // @grant        none
 // ==/UserScript==
 (function() {
-    function reflesh_count() {
-        fetch('/user_notifications/get_new', { method: 'POST'})
-            .then((response) => response.json())
-            .then((json) => {
-                var count = json.data.count;
-                var title = count === 0 ? '-///-' : '[' + count + ']';
-                document.getElementsByTagName('title')[0].innerHTML = title + ' Оповещения';
-        });
-        setTimeout(reflesh_count, 1000 * 63 * 3); //min
+    const PERIOD = 1000 * 60 * 3; //min
+    const K = 'notificationCount';
+    const K_DATE = 'notificationCount__lastUpdated';
+
+    function set_title(count) {
+        var title = count == 0 ? '-///-' : '[' + count + ']';
+        document.getElementsByTagName('title')[0].innerHTML = title;
     }
-    reflesh_count();
+
+    function uuu() {
+        fetch('/user_notifications/get_new', { method: 'POST'}).then((r) => r.json()).then((j) => {
+            const count = j.data.count;
+            localStorage.setItem(K, count);
+            localStorage.setItem(K_DATE, Date.now());
+            set_title(count);
+        });
+    }
+
+    function ttt() {
+        const d = localStorage.getItem(K_DATE);
+        if (d === null || Date.now() + PERIOD < d) {
+            uuu();
+        } else {
+            set_title(localStorage.getItem(K));
+        }
+        setTimeout(ttt, PERIOD);
+    }
+    uuu();
+    setTimeout(ttt, PERIOD);
 })();
