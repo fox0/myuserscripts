@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         count notification
-// @version      0.3
+// @version      0.3.1
 // @match        https://ficbook.net/notifications
 // @grant        none
 // ==/UserScript==
@@ -13,7 +13,7 @@
                 var title = count === 0 ? '-///-' : '[' + count + ']';
                 document.getElementsByTagName('title')[0].innerHTML = title + ' Оповещения';
         });
+        setTimeout(reflesh_count, 1000 * 63 * 3); //min
     }
-    setTimeout(reflesh_count, 1000 * 63 * 3); //min
     reflesh_count();
 })();
