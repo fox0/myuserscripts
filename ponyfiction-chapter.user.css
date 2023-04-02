@@ -1,0 +1,10 @@
+/* ==UserStyle==
+@name           ponyfiction-chapter
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+==/UserStyle== */
+@-moz-document domain("ponyfiction.org") {
+    .chapter-text {
+        max-width: 500px;
+    }
+}
