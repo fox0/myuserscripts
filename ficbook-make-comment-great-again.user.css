@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ficbook make comment great again
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        0.2
 ==/UserStyle== */
 @-moz-document domain("ficbook.net") {
     :root {
@@ -10,5 +10,9 @@
     }
     .comment-container .comment-date {
         font-size: 1.5rem;
+    }
+    .img-holder-universal.avatar-28 {
+        width: 100px;
+        height: 100px;
     }
 }
