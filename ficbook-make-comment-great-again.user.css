@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name           ficbook make comment great again
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+==/UserStyle== */
+@-moz-document domain("ficbook.net") {
+    :root {
+        --n1-font-size: 1.6rem;
+        --t3-font-size: 1.7rem;
+    }
+    .comment-container .comment-date {
+        font-size: 1.5rem;
+    }
+}
